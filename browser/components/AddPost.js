@@ -13,12 +13,12 @@ export default class AddPost extends Component {
   }
 
   handleTitleChange(e) {
-    console.log('in handle title change', e.target.value)
+    // console.log('in handle title change', e.target.value)
     this.setState({title: e.target.value});
   }
 
   handleContentChange(e) {
-    console.log('in handle comment change', e.target.value)
+    // console.log('in handle comment change', e.target.value)
     this.setState({content: e.target.value});
   }
 
