@@ -39,9 +39,9 @@ app.use('/api', require('./routes/api'));
 
 app.use('/auth', require('./routes/auth'));
 
-app.get('/*', function (req, res) {
-  res.sendFile('index.html', { root: path.join(__dirname, '../../browser') });
-});
+// app.get('/*', function (req, res) {
+//   res.sendFile('index.html', { root: path.join(__dirname, '../../browser') });
+// });
 
 //Error handling middleware
 app.use((err, req, res, next) => {
