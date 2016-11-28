@@ -28750,13 +28750,12 @@
 	    key: 'onSubmit',
 	    value: function onSubmit(event) {
 	      event.preventDefault();
-	      // const { message, login, signup } = this.props;
 	      var credentials = {
 	        email: event.target.email.value,
 	        password: event.target.password.value
 	      };
 
-	      console.log("credentials", credentials);
+	      // console.log("credentials", credentials);
 
 	      _axios2.default.post('/auth/login', credentials).then(function (response) {
 	        console.log("success?", response.data);

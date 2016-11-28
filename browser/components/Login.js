@@ -9,13 +9,12 @@ export default class Login extends Component {
 
   onSubmit(event) {
 		event.preventDefault();
-		// const { message, login, signup } = this.props;
     const credentials = {
       email: event.target.email.value,
       password: event.target.password.value
     }
 
-    console.log("credentials", credentials);
+    // console.log("credentials", credentials);
 
     axios.post('/auth/login', credentials)
     .then(response => {

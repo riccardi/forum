@@ -33,17 +33,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //       .catch(done);
 // });
 
-// Routes that will be accessed via AJAX should be prepended with
-// /api so they are isolated from our GET /* wildcard.
 app.use('/api', require('./routes/api'));
 
 app.use('/auth', require('./routes/auth'));
 
-// app.get('/*', function (req, res) {
-//   res.sendFile('index.html', { root: path.join(__dirname, '../../browser') });
-// });
+app.get('/*', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../../browser') });
+});
 
-//Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err);
   console.error(err.stack);
