@@ -12,7 +12,7 @@ startDb.then(function () {
 let server = require('http').createServer();
 
 let createApplication = function () {
-    server.on('request', app); 
+    server.on('request', app);
 };
 
 let startServer = function () {
