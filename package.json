@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,html,css server/main.js",
+    "start": "webpack -w & nodemon -e js,html,css server/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seed.js",
-    "postinstall": "webpack",
-    "prod": "NODE_ENV=production node server/main.js"
+    "seed": "node seed.js"
   },
   "author": "",
   "license": "ISC",
