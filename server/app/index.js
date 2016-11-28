@@ -9,29 +9,29 @@ const session = require('express-session');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(session({
-  secret: 'supersecret'
-}));
+// app.use(session({
+//   secret: 'supersecret'
+// }));
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use(express.static('public'));
-app.use(express.static('node_modules'));
-
-passport.serializeUser(function (user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-  User.findById(id)
-      .then(user => {
-        done(null, user);
-      })
-      .catch(done);
-});
+// app.use(passport.initialize());
+// app.use(passport.session());
+//
+// app.use(express.static('public'));
+// app.use(express.static('node_modules'));
+//
+// passport.serializeUser(function (user, done) {
+//   done(null, user.id);
+// });
+//
+// passport.deserializeUser(function (id, done) {
+//   User.findById(id)
+//       .then(user => {
+//         done(null, user);
+//       })
+//       .catch(done);
+// });
 
 // Routes that will be accessed via AJAX should be prepended with
 // /api so they are isolated from our GET /* wildcard.
