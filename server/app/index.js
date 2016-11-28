@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(passport.initialize());
 // app.use(passport.session());
 //
-// app.use(express.static('public'));
-// app.use(express.static('node_modules'));
+app.use(express.static('public'));
+app.use(express.static('node_modules'));
 //
 // passport.serializeUser(function (user, done) {
 //   done(null, user.id);
