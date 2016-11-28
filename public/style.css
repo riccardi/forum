@@ -1,0 +1,59 @@
+.body {
+  font-family: 'Lato', sans-serif;
+  font-size:16px;
+  background-color: #ECEFF1 !important;
+}
+
+/*#app { background-color: #EDF1F1; }*/
+
+#nav_container {
+  text-align: center;
+  background-color: #1565C0;
+}
+
+#nav_container h1 {
+  color:white;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-top:0px;
+  padding-top:20px;
+}
+
+#nav_container ul {
+  list-style: none;
+}
+
+#main_container {
+  width:90%;
+  margin:0px auto;
+}
+
+.post {
+  border-bottom:1px solid #eee;
+  padding-bottom:20px;
+}
+
+.post h3 {
+  font-family: 'Sumana', serif;
+}
+
+button {
+  background-color:#DD2C00;
+  color:#fff;
+  font-size:18px;
+  padding:7px 12px;
+  border:none;
+  font-family: 'Julius Sans One', sans-serif;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color:#FF3D00;
+}
+
+
+.form-control {
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  border-radius: 2px;
+  border:1px solid #CFD8DC;
+}
