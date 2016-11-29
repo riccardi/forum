@@ -93,13 +93,13 @@ db.sync({ force: true })
 .then(() => {
   return seedComments();
 })
-.then(() => {
-  console.log('in User')
-  return User.findById(1)
-  .then((user) => {
-    return user.addPost([1])
-  });
-})
+// .then(() => {
+//   console.log('in User')
+//   return User.findById(1)
+//   .then((user) => {
+//     return user.addPost([1])
+//   });
+// })
 .then(() => {
   console.log('in Post');
   return Post.findById(1)
