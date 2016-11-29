@@ -7,10 +7,11 @@ const User = require('./user.js');
 const Post = require('./post.js');
 const Comment = require('./comment.js');
 
-User.hasMany(Post);
-Post.belongsTo(User);
-User.hasMany(Comment);
-Comment.belongsTo(User);
+//Relations to User is messing with Heroku since there are no users initially 
+// User.hasMany(Post);
+// Post.belongsTo(User);
+// User.hasMany(Comment);
+// Comment.belongsTo(User);
 Post.hasMany(Comment);
 Comment.belongsTo(Post);
 Comment.hasMany(Comment, { as: 'parent', foreignKey: 'parent_id'});
