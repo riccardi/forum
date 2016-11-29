@@ -11,7 +11,7 @@ module.exports = router;
 
 router.get('/', (req, res, next) => {
   Post.findAll({
-    include: [ User ],
+    // include: [ User ],
     order: [
       ['created_at', 'ASC']
     ]
