@@ -22,6 +22,14 @@ router.get('/', (req, res, next) => {
   .catch(next);
 });
 
+router.post('/', (req, res, next) => {
+  Post.create(req.body)
+  .then(post => {
+    res.status(201).send(post);
+  })
+  .catch(next);
+});
+
 router.get('/:postId', (req, res, next) => {
   Post.findOne({
     where: {
@@ -35,12 +43,4 @@ router.get('/:postId', (req, res, next) => {
   .then(post => {
     res.json(post);
   })
-});
-
-router.post('/', (req, res, next) => {
-  Post.create(req.body)
-  .then(post => {
-    res.status(201).send(post);
-  })
-  .catch(next);
 });
