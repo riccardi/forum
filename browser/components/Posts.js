@@ -56,7 +56,7 @@ export default class Posts extends Component {
 
   handleNewPost(data) {
     //Hard coded user for now...
-    data.user_id = 1;
+    data.post_user_id_fkey = 1;
 
     axios.post('/api/posts', data)
     .then(response => {
