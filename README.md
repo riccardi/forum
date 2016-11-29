@@ -3,6 +3,7 @@
 Deployed on Heroku at https://intense-depths-21147.herokuapp.com
 
 Anyone can add a post or comment on a post or another comment. All comments are threaded.
+I started working on Users and Authentication but couldn't get it up and running the way I wanted to.
 
 # Left to Do:
 - User Authentication
